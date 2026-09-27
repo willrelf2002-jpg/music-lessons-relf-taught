@@ -254,3 +254,21 @@ html, body {
     object-fit: contain;
   }
 }
+
+/* Final spacing polish: reduce the gap before Private Lessons */
+.hero {
+  padding-bottom: clamp(28px, 4vw, 52px) !important;
+}
+.lessons,
+#lessons {
+  padding-top: clamp(32px, 5vw, 60px) !important;
+}
+@media (max-width: 700px) {
+  .hero {
+    padding-bottom: 24px !important;
+  }
+  .lessons,
+  #lessons {
+    padding-top: 28px !important;
+  }
+}
