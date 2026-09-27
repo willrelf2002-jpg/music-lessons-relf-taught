@@ -478,3 +478,60 @@ html, body {
   .contact-mini strong { font-size: 1.16rem !important; }
   .hero .eyebrow { font-size: 0.98rem !important; }
 }
+
+/* Paired hero calls-to-action */
+.hero-choice-row {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(26px, 4vw, 64px);
+  width: 100%;
+  margin: 0 0 20px;
+}
+.hero-choice {
+  margin: 0 !important;
+  flex: 1 1 0;
+  min-width: 0;
+  line-height: 1.02;
+}
+.hero-choice span,
+.hero-choice a {
+  display: block;
+}
+.hero-choice a {
+  text-decoration: none;
+  color: inherit;
+}
+.learn-choice span {
+  color: inherit;
+}
+.learn-choice a {
+  color: var(--accent) !important;
+}
+.play-choice span {
+  color: var(--accent) !important;
+}
+.play-choice a {
+  color: inherit !important;
+}
+.hero-choice a:hover,
+.hero-choice a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+@media (max-width: 700px) {
+  .hero-choice-row {
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .hero-choice {
+    font-size: clamp(1.65rem, 7.2vw, 2.25rem) !important;
+  }
+}
+@media (max-width: 430px) {
+  .hero-choice-row {
+    gap: 10px;
+  }
+  .hero-choice {
+    font-size: clamp(1.35rem, 6.6vw, 1.8rem) !important;
+  }
+}
