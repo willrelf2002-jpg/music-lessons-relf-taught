@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Hero Section</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background-color: var(--card-bg);
+      padding: 48px;
+      border-radius: 24px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .badge {
+      align-self: flex-start;
+      background-color: rgba(99, 102, 241, 0.15);
+      color: #818cf8;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--text-muted);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .image-container svg {
+      width: 100%;
+      height: auto;
+      max-width: 450px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .badge {
+        align-self: center;
+      }
+
+      .cta-group {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <div class="content">
+      <span class="badge">New Release v2.0</span>
+      <h1>Build faster with smart components</h1>
+      <p>A modular design system crafted for modern web experiences. Optimized for speed, accessibility, and seamless integration.</p>
+      <div class="cta-group">
+        <a href="#" class="btn btn-primary">Get Started</a>
+        <a href="#" class="btn btn-secondary">Documentation</a>
+      </div>
+    </div>
+
+    <div class="image-container">
+      <!-- Embedded Vector Illustration -->
+      <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="500" height="400" rx="16" fill="#0F172A"/>
+        <!-- Decorative Grid Lines -->
+        <path d="M50 0V400M150 0V400M250 0V400M350 0V400M450 0V400" stroke="#334155" stroke-opacity="0.3"/>
+        <path d="M0 50H500M0 150H500M0 250H500M0 350H500" stroke="#334155" stroke-opacity="0.3"/>
+        <!-- Card 1 -->
+        <rect x="80" y="100" width="180" height="200" rx="12" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+        <circle cx="120" cy="140" r="16" fill="#6366F1"/>
+        <rect x="150" y="132" width="80" height="8" rx="4" fill="#94A3B8"/>
+        <rect x="150" y="148" width="50" height="6" rx="3" fill="#64748B"/>
+        <rect x="100" y="180" width="140" height="10" rx="5" fill="#334155"/>
+        <rect x="100" y="200" width="110" height="10" rx="5" fill="#334155"/>
+        <rect x="100" y="240" width="80" height="32" rx="6" fill="#6366F1"/>
+        <!-- Card 2 (Overlapping) -->
+        <rect x="220" y="60" width="200" height="220" rx="12" fill="#334155" stroke="#6366F1" stroke-width="2"/>
+        <path d="M250 120L310 180L390 100" stroke="#818CF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="390" cy="100" r="6" fill="#38BDF8"/>
+        <rect x="250" y="210" width="140" height="12" rx="6" fill="#94A3B8"/>
+        <rect x="250" y="234" width="90" height="10" rx="5" fill="#64748B"/>
+      </svg>
+    </div>
+  </main>
+
+</body>
+</html>
