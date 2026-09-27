@@ -351,3 +351,18 @@ html, body {
     padding-top: 6px !important;
   }
 }
+
+/* Top brand prominence */
+.brand,
+.logo {
+  color: var(--accent) !important;
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 700px) {
+  .brand,
+  .logo {
+    font-size: 1.15rem !important;
+  }
+}
