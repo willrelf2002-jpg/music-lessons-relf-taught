@@ -272,3 +272,39 @@ html, body {
     padding-top: 28px !important;
   }
 }
+
+/* FINAL v4: compact transition from opening section to Private Lessons */
+.hero {
+  min-height: 0 !important;
+  height: auto !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 0 !important;
+}
+.hero-grid {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.hero + .lessons,
+.hero + #lessons,
+.lessons,
+#lessons {
+  margin-top: 0 !important;
+  padding-top: 18px !important;
+}
+@media (max-width: 700px) {
+  .hero {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 0 !important;
+  }
+  .hero-grid {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .lessons,
+  #lessons {
+    margin-top: 0 !important;
+    padding-top: 14px !important;
+  }
+}
