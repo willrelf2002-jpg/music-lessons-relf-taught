@@ -641,3 +641,111 @@ html, body {
     margin-top: 0 !important;
   }
 }
+
+/* FINAL v7 — compact desktop header-to-hero transition */
+@media (min-width: 701px) {
+  body > header,
+  header.site-header,
+  .site-header {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  section.hero#home,
+  section.hero {
+    margin-top: 0 !important;
+    padding-top: 4px !important;
+    min-height: 0 !important;
+    height: auto !important;
+    gap: 0 !important;
+  }
+
+  section.hero > .hero-visual.hero-visual-photo {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    min-height: 0 !important;
+    height: 430px !important;
+    aspect-ratio: auto !important;
+  }
+
+  section.hero > .hero-visual.hero-visual-photo img {
+    min-height: 0 !important;
+    height: 100% !important;
+    max-height: 430px !important;
+    object-fit: cover !important;
+  }
+}
+
+/* FINAL v8 — desktop hero: eyebrow above, phrases either side of image */
+@media (min-width: 701px) {
+  section.hero#home {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 520px) minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto !important;
+    column-gap: clamp(24px, 4vw, 64px) !important;
+    row-gap: 14px !important;
+    align-items: center !important;
+    padding-top: 10px !important;
+  }
+
+  /* Hero copy participates in the parent grid so its children can be positioned around the image */
+  section.hero#home > .hero-copy {
+    display: contents !important;
+  }
+
+  /* PIANO • DRUMS • SESSION MUSICIAN */
+  section.hero#home .hero-copy > .eyebrow {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 !important;
+    justify-self: center !important;
+    text-align: center !important;
+    margin: 0 0 2px !important;
+  }
+
+  /* Main image in the centre */
+  section.hero#home > .hero-visual.hero-visual-photo {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    height: 430px !important;
+    margin: 0 !important;
+    align-self: center !important;
+    justify-self: center !important;
+  }
+
+  /* Split the paired CTA wrapper across the grid using contents */
+  section.hero#home .hero-choice-row {
+    display: contents !important;
+  }
+
+  section.hero#home .learn-choice {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    justify-self: end !important;
+    align-self: center !important;
+    text-align: right !important;
+    max-width: 330px !important;
+  }
+
+  section.hero#home .play-choice {
+    grid-column: 3 !important;
+    grid-row: 2 !important;
+    justify-self: start !important;
+    align-self: center !important;
+    text-align: left !important;
+    max-width: 330px !important;
+  }
+
+  /* Keep requested desktop colours explicit */
+  section.hero#home .learn-choice > span { color: #111 !important; }
+  section.hero#home .learn-choice > a { color: var(--accent) !important; }
+  section.hero#home .play-choice > span { color: var(--accent) !important; }
+  section.hero#home .play-choice > a { color: #111 !important; }
+
+  /* All remaining hero-copy content goes neatly below the three-column feature */
+  section.hero#home .hero-copy > :not(.eyebrow):not(.hero-choice-row) {
+    grid-column: 1 / -1 !important;
+    grid-row: 3 !important;
+  }
+}
