@@ -111,20 +111,21 @@
       <div><span>EMAIL</span><strong>willrelf2002@gmail.com</strong></div>
     </div>
   </div>
-  <form class="booking-form" action="https://formsubmit.co/willrelf2002@gmail.com" method="post" enctype="text/plain">
+  <form class="booking-form" action="https://formsubmit.co/willrelf2002@gmail.com" method="post" >
         <input type="hidden" name="_subject" value="New Free Taster Booking Request">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://music-lessons-relf-taught.co.uk/">
 
-    <label>Your name<input required name="Name" type="text" placeholder="Your name"></label>
-    <label>Email address<input required name="Email" type="email" placeholder="you@example.com"></label>
+    <label>Your name<input required name="name" type="text" placeholder="Your name"></label>
+    <label>Email address<input required name="_replyto" type="email" placeholder="you@example.com"></label>
     <label>What would you like to learn?
-      <select name="Instrument"><option>Piano</option><option>Drums</option><option>Not sure yet</option></select>
+      <select name="instrument"><option>Piano</option><option>Drums</option><option>Not sure yet</option></select>
     </label>
-    <label>Preferred day / time<input name="Preferred time" type="text" placeholder="e.g. Saturday afternoon"></label>
-    <label>Tell me a little about your goals<textarea name="Message" rows="4" placeholder="I'm a complete beginner / I want to learn songs / ..."></textarea></label>
+    <label>Preferred day / time<input name="preferred_time" type="text" placeholder="e.g. Saturday afternoon"></label>
+    <label>Tell me a little about your goals<textarea name="goals" rows="4" placeholder="I'm a complete beginner / I want to learn songs / ..."></textarea></label>
     <button class="button primary full" type="submit">Request my free taster →</button>
-    <small>Submitting opens your email app with the enquiry ready to send.</small>
+    <small>Your enquiry will be sent directly to Will by email.</small>
   </form>
 </section>
 
