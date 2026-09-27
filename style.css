@@ -578,3 +578,49 @@ html, body {
     color: #111 !important;
   }
 }
+
+/* CORRECTED desktop-only hero layout. Phone <=700px remains untouched. */
+@media (min-width: 701px) {
+  section.hero {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+  }
+
+  section.hero > .hero-visual.hero-visual-photo {
+    order: 1 !important;
+    width: min(100%, 560px) !important;
+    max-width: 560px !important;
+    margin: 0 auto 28px !important;
+    align-self: center !important;
+  }
+
+  section.hero > .hero-copy {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  section.hero .hero-choice-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    max-width: 940px !important;
+    margin: 0 auto 20px !important;
+  }
+
+  section.hero .learn-choice > span {
+    color: #111111 !important;
+  }
+  section.hero .learn-choice > a {
+    color: var(--accent) !important;
+  }
+  section.hero .play-choice > span {
+    color: var(--accent) !important;
+  }
+  section.hero .play-choice > a {
+    color: #111111 !important;
+  }
+}
