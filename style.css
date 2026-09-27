@@ -118,3 +118,50 @@ footer{background:#111;color:#fff;padding:55px 8vw 30px;display:grid;grid-templa
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Final phone polish */
+.review-copy {
+  max-height: 13.5em; /* show a useful chunk before "Read full review" */
+}
+.review-always-open .review-copy {
+  max-height: none !important;
+  overflow: visible !important;
+}
+.review-always-open cite {
+  display: block;
+  margin-top: 16px;
+}
+
+@media (max-width: 700px) {
+  /* Keep the orange taster card clearly below its title. */
+  #booking,
+  .mobile-booking-fix {
+    display: block !important;
+    overflow: visible !important;
+  }
+  #booking .section-head,
+  .mobile-booking-fix .section-head {
+    position: relative !important;
+    display: block !important;
+    margin: 0 0 36px 0 !important;
+    padding: 0 !important;
+    min-height: auto !important;
+  }
+  #booking .booking-card,
+  .mobile-booking-fix .booking-card {
+    position: relative !important;
+    display: block !important;
+    clear: both !important;
+    float: none !important;
+    transform: none !important;
+    inset: auto !important;
+    margin: 0 !important;
+    top: auto !important;
+  }
+  .review-copy {
+    max-height: 15em;
+  }
+  .review-always-open .review-copy {
+    max-height: none !important;
+  }
+}
