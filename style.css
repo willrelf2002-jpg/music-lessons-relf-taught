@@ -535,3 +535,46 @@ html, body {
     font-size: clamp(1.35rem, 6.6vw, 1.8rem) !important;
   }
 }
+
+/* Desktop-only hero refinement — mobile (<=700px) intentionally untouched */
+@media (min-width: 701px) {
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .hero-visual.hero-visual-photo {
+    order: 1 !important;
+    width: min(100%, 560px) !important;
+    max-width: 560px !important;
+    margin: 0 auto 30px !important;
+    align-self: center !important;
+  }
+
+  .hero-copy {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .hero-choice-row {
+    justify-content: center !important;
+    max-width: 920px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero-choice-row .learn-choice > span {
+    color: #111 !important;
+  }
+  .hero-choice-row .learn-choice > a {
+    color: var(--accent) !important;
+  }
+  .hero-choice-row .play-choice > span {
+    color: var(--accent) !important;
+  }
+  .hero-choice-row .play-choice > a {
+    color: #111 !important;
+  }
+}
