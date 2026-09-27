@@ -203,3 +203,54 @@ footer{background:#111;color:#fff;padding:55px 8vw 30px;display:grid;grid-templa
  .performance-video{width:100%;height:auto;aspect-ratio:16/9}
  .playable-card{width:100%;max-width:100%}
 }
+
+/* Mobile video overflow fix */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.video-grid,
+.video-card,
+.playable-card {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.performance-video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .video-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .video-card,
+  .playable-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .performance-video {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+  }
+}
