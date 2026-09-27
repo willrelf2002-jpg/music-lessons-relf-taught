@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://music-lessons-relf-taught.co.uk/sitemap.xml
