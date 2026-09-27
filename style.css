@@ -453,3 +453,28 @@ html, body {
 #booking .contact-detail a {
   font-size: 1.08em !important;
 }
+
+/* Contact details: larger and clearer */
+.contact-mini span {
+  color: var(--accent) !important;
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.06em;
+}
+.contact-mini strong {
+  font-size: 1.28rem !important;
+  line-height: 1.35 !important;
+  font-weight: 800 !important;
+}
+
+/* Opening instrument line */
+.hero .eyebrow {
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.09em;
+}
+@media (max-width: 700px) {
+  .contact-mini span { font-size: 1rem !important; }
+  .contact-mini strong { font-size: 1.16rem !important; }
+  .hero .eyebrow { font-size: 0.98rem !important; }
+}
