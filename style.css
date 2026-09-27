@@ -308,3 +308,46 @@ html, body {
     padding-top: 14px !important;
   }
 }
+
+/* FINAL v7: remove excess blank gap before Private Lessons */
+.hero {
+  min-height: unset !important;
+  height: auto !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.hero-grid {
+  min-height: unset !important;
+  height: auto !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  align-items: center !important;
+}
+.hero .ticks,
+.hero .check-list,
+.hero .features,
+.hero ul {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.hero + section,
+.lessons,
+#lessons {
+  margin-top: 0 !important;
+  padding-top: 8px !important;
+}
+@media (max-width: 700px) {
+  .hero,
+  .hero-grid {
+    min-height: unset !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .hero + section,
+  .lessons,
+  #lessons {
+    margin-top: 0 !important;
+    padding-top: 6px !important;
+  }
+}
