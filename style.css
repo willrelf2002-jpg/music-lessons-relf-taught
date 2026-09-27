@@ -193,3 +193,13 @@ footer{background:#111;color:#fff;padding:55px 8vw 30px;display:grid;grid-templa
     margin: 0 auto;
   }
 }
+
+.playable-card{overflow:hidden}
+.performance-video{
+ display:block;width:100%;height:auto;aspect-ratio:16/9;
+ object-fit:contain;background:#000;max-width:100%;
+}
+@media(max-width:700px){
+ .performance-video{width:100%;height:auto;aspect-ratio:16/9}
+ .playable-card{width:100%;max-width:100%}
+}
