@@ -624,3 +624,20 @@ html, body {
     color: #111111 !important;
   }
 }
+
+/* FINAL: remove oversized desktop gap directly below the header */
+@media (min-width: 701px) {
+  header,
+  .site-header {
+    margin-bottom: 0 !important;
+  }
+
+  section.hero {
+    margin-top: 0 !important;
+    padding-top: 22px !important;
+  }
+
+  section.hero > .hero-visual.hero-visual-photo {
+    margin-top: 0 !important;
+  }
+}
