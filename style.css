@@ -421,3 +421,35 @@ html, body {
     text-align: center !important;
   }
 }
+
+/* Final contact and heading polish */
+.accent-text {
+  color: var(--accent) !important;
+  font-style: normal;
+}
+
+/* Booking/contact section: slightly larger contact labels and details */
+.booking .contact-item,
+#booking .contact-item,
+.booking .contact-detail,
+#booking .contact-detail {
+  font-size: 1.08em;
+}
+
+/* PHONE / EMAIL labels only */
+.booking .contact-item strong,
+#booking .contact-item strong,
+.booking .contact-label,
+#booking .contact-label {
+  color: var(--accent) !important;
+  font-size: 1.12em !important;
+  font-weight: 800 !important;
+}
+
+/* Actual phone number and email */
+.booking .contact-item a,
+#booking .contact-item a,
+.booking .contact-detail a,
+#booking .contact-detail a {
+  font-size: 1.08em !important;
+}
