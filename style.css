@@ -536,283 +536,104 @@ html, body {
   }
 }
 
-/* Desktop-only hero refinement — mobile (<=700px) intentionally untouched */
+/* v11 DESKTOP-ONLY hero.
+   The original v3 mobile hero is preserved byte-for-byte and remains active <=700px. */
+.desktop-only-hero {
+  display: none !important;
+}
+
 @media (min-width: 701px) {
-  .hero-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
+  /* Hide the original hero only on desktop. */
+  section.hero#home {
+    display: none !important;
   }
 
-  .hero-visual.hero-visual-photo {
-    order: 1 !important;
-    width: min(100%, 560px) !important;
-    max-width: 560px !important;
-    margin: 0 auto 30px !important;
-    align-self: center !important;
+  .desktop-only-hero {
+    display: block !important;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 12px clamp(28px, 5vw, 80px) 28px;
+    box-sizing: border-box;
   }
 
-  .hero-copy {
-    order: 2 !important;
-    width: 100% !important;
-    max-width: none !important;
+  .desktop-only-eyebrow {
+    margin: 0 0 18px;
+    text-align: center;
+    font-size: 1.12rem;
+    font-weight: 800;
+    letter-spacing: .09em;
   }
 
-  .hero-choice-row {
-    justify-content: center !important;
-    max-width: 920px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+  .desktop-only-main {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) minmax(380px, 520px) minmax(220px, 1fr);
+    gap: clamp(28px, 4vw, 64px);
+    align-items: center;
   }
 
-  .hero-choice-row .learn-choice > span {
+  .desktop-only-photo {
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+
+  .desktop-only-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .desktop-only-side {
+    margin: 0;
+    line-height: 1.04;
+    font-size: clamp(2.15rem, 3vw, 3.55rem);
+  }
+
+  .desktop-only-side span,
+  .desktop-only-side a {
+    display: block;
+  }
+
+  .desktop-only-side a {
+    text-decoration: none;
+  }
+
+  .desktop-only-learn {
+    text-align: right;
+  }
+  .desktop-only-learn span {
     color: #111 !important;
   }
-  .hero-choice-row .learn-choice > a {
+  .desktop-only-learn a {
     color: var(--accent) !important;
   }
-  .hero-choice-row .play-choice > span {
+
+  .desktop-only-play {
+    text-align: left;
+  }
+  .desktop-only-play span {
     color: var(--accent) !important;
   }
-  .hero-choice-row .play-choice > a {
+  .desktop-only-play a {
     color: #111 !important;
   }
-}
 
-/* CORRECTED desktop-only hero layout. Phone <=700px remains untouched. */
-@media (min-width: 701px) {
-  section.hero {
-    display: flex !important;
-    flex-direction: column !important;
-    grid-template-columns: none !important;
-    align-items: stretch !important;
-    gap: 0 !important;
-  }
-
-  section.hero > .hero-visual.hero-visual-photo {
-    order: 1 !important;
-    width: min(100%, 560px) !important;
-    max-width: 560px !important;
-    margin: 0 auto 28px !important;
-    align-self: center !important;
-  }
-
-  section.hero > .hero-copy {
-    order: 2 !important;
-    width: 100% !important;
-    max-width: none !important;
-  }
-
-  section.hero .hero-choice-row {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    max-width: 940px !important;
-    margin: 0 auto 20px !important;
-  }
-
-  section.hero .learn-choice > span {
-    color: #111111 !important;
-  }
-  section.hero .learn-choice > a {
-    color: var(--accent) !important;
-  }
-  section.hero .play-choice > span {
-    color: var(--accent) !important;
-  }
-  section.hero .play-choice > a {
-    color: #111111 !important;
+  .desktop-only-side a:hover,
+  .desktop-only-side a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: .12em;
   }
 }
 
-/* FINAL: remove oversized desktop gap directly below the header */
-@media (min-width: 701px) {
-  header,
-  .site-header {
-    margin-bottom: 0 !important;
+/* Explicitly guarantee the new desktop block never appears on phone. */
+@media (max-width: 700px) {
+  .desktop-only-hero {
+    display: none !important;
   }
-
-  section.hero {
-    margin-top: 0 !important;
-    padding-top: 22px !important;
-  }
-
-  section.hero > .hero-visual.hero-visual-photo {
-    margin-top: 0 !important;
-  }
-}
-
-/* FINAL v7 — compact desktop header-to-hero transition */
-@media (min-width: 701px) {
-  body > header,
-  header.site-header,
-  .site-header {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  section.hero#home,
-  section.hero {
-    margin-top: 0 !important;
-    padding-top: 4px !important;
-    min-height: 0 !important;
-    height: auto !important;
-    gap: 0 !important;
-  }
-
-  section.hero > .hero-visual.hero-visual-photo {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    min-height: 0 !important;
-    height: 430px !important;
-    aspect-ratio: auto !important;
-  }
-
-  section.hero > .hero-visual.hero-visual-photo img {
-    min-height: 0 !important;
-    height: 100% !important;
-    max-height: 430px !important;
-    object-fit: cover !important;
-  }
-}
-
-/* FINAL v8 — desktop hero: eyebrow above, phrases either side of image */
-@media (min-width: 701px) {
   section.hero#home {
     display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(360px, 520px) minmax(0, 1fr) !important;
-    grid-template-rows: auto auto auto !important;
-    column-gap: clamp(24px, 4vw, 64px) !important;
-    row-gap: 14px !important;
-    align-items: center !important;
-    padding-top: 10px !important;
   }
-
-  /* Hero copy participates in the parent grid so its children can be positioned around the image */
-  section.hero#home > .hero-copy {
-    display: contents !important;
-  }
-
-  /* PIANO • DRUMS • SESSION MUSICIAN */
-  section.hero#home .hero-copy > .eyebrow {
-    grid-column: 1 / -1 !important;
-    grid-row: 1 !important;
-    justify-self: center !important;
-    text-align: center !important;
-    margin: 0 0 2px !important;
-  }
-
-  /* Main image in the centre */
-  section.hero#home > .hero-visual.hero-visual-photo {
-    grid-column: 2 !important;
-    grid-row: 2 !important;
-    width: 100% !important;
-    max-width: 520px !important;
-    height: 430px !important;
-    margin: 0 !important;
-    align-self: center !important;
-    justify-self: center !important;
-  }
-
-  /* Split the paired CTA wrapper across the grid using contents */
-  section.hero#home .hero-choice-row {
-    display: contents !important;
-  }
-
-  section.hero#home .learn-choice {
-    grid-column: 1 !important;
-    grid-row: 2 !important;
-    justify-self: end !important;
-    align-self: center !important;
-    text-align: right !important;
-    max-width: 330px !important;
-  }
-
-  section.hero#home .play-choice {
-    grid-column: 3 !important;
-    grid-row: 2 !important;
-    justify-self: start !important;
-    align-self: center !important;
-    text-align: left !important;
-    max-width: 330px !important;
-  }
-
-  /* Keep requested desktop colours explicit */
-  section.hero#home .learn-choice > span { color: #111 !important; }
-  section.hero#home .learn-choice > a { color: var(--accent) !important; }
-  section.hero#home .play-choice > span { color: var(--accent) !important; }
-  section.hero#home .play-choice > a { color: #111 !important; }
-
-  /* All remaining hero-copy content goes neatly below the three-column feature */
-  section.hero#home .hero-copy > :not(.eyebrow):not(.hero-choice-row) {
-    grid-column: 1 / -1 !important;
-    grid-row: 3 !important;
-  }
-}
-
-/* v9: independent desktop hero; original phone hero is untouched */
-.desktop-hero { display:none; }
-
-@media (min-width:701px) {
-  section.hero#home { display:none !important; }
-
-  .desktop-hero {
-    display:block !important;
-    padding:10px clamp(28px,5vw,80px) 20px;
-    margin:0 auto;
-    max-width:1400px;
-    box-sizing:border-box;
-  }
-  .desktop-hero-eyebrow {
-    margin:0 0 16px;
-    text-align:center;
-    font-size:1.12rem;
-    font-weight:800;
-    letter-spacing:.09em;
-  }
-  .desktop-hero-main {
-    display:grid;
-    grid-template-columns:minmax(220px,1fr) minmax(380px,520px) minmax(220px,1fr);
-    gap:clamp(28px,4vw,64px);
-    align-items:center;
-  }
-  .desktop-hero-photo img {
-    display:block;
-    width:100%;
-    height:430px;
-    object-fit:cover;
-    border-radius:inherit;
-  }
-  .desktop-side {
-    margin:0;
-    line-height:1.04;
-    font-size:clamp(2.2rem,3.2vw,3.7rem);
-  }
-  .desktop-side span,.desktop-side a { display:block; }
-  .desktop-side a { text-decoration:none; }
-  .desktop-learn { text-align:right; }
-  .desktop-play { text-align:left; }
-  .desktop-learn span { color:#111 !important; }
-  .desktop-learn a { color:var(--accent) !important; }
-  .desktop-play span { color:var(--accent) !important; }
-  .desktop-play a { color:#111 !important; }
-  .desktop-side a:hover,.desktop-side a:focus-visible {
-    text-decoration:underline;
-    text-underline-offset:.12em;
-  }
-  .desktop-hero-text {
-    max-width:850px;
-    margin:22px auto 14px;
-    text-align:center;
-  }
-  .desktop-hero-buttons,.desktop-quick-points {
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px 18px;
-  }
-  .desktop-quick-points { margin-top:16px; }
-}
-@media (max-width:700px) {
-  .desktop-hero { display:none !important; }
 }
