@@ -843,3 +843,24 @@ html, body {
     object-position:center !important;
   }
 }
+
+/* v13 — logo mark only */
+.logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.site-logo-mark {
+  display: block !important;
+  width: 46px !important;
+  height: 46px !important;
+  object-fit: contain !important;
+  flex: 0 0 46px !important;
+}
+@media (max-width: 700px) {
+  .site-logo-mark {
+    width: 38px !important;
+    height: 38px !important;
+    flex-basis: 38px !important;
+  }
+}
